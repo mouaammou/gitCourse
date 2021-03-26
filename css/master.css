@@ -1,0 +1,428 @@
+/* Globale variables */
+:root {
+    --main-color: #84f601;
+    --perfer-color:#900089;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* start settings box section */
+.setting-box {
+    position: fixed;
+    background: #fff;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -250px;
+    z-index: 22;
+    transition: 0.5s;
+}   
+.setting-box.open-settings{
+    left: 0;
+}
+.setting-box .toggle-setting{
+    position: absolute;
+    top: 163px;
+    left: 250px;
+    background: rgb(115 123 123);
+    border-radius: 20px;
+    cursor: pointer;
+}   
+.setting-box .gear {
+    font-size: 20px;
+    padding: 5px 8px;
+    color: #fff;
+}   
+.setting-box .setting-container > div {
+    background: #eee;
+    text-align: center;
+    margin: 20px 5px;
+    padding: 5px;
+}
+.setting-container h4 {
+    font-size: 24px;
+    font-family: Livvic;
+    padding: 20px 0;
+}
+.setting-box .colors-option .color-list {
+    list-style: none;
+    margin: 0;
+}
+.setting-box .colors-option .color-list li{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.setting-box .colors-option .color-list li.active{
+    opacity: 1;
+    border: 1px solid rgb(73 73 73 / 40%);
+}
+
+.setting-box .colors-option .color-list li:first-child{
+    background-color: #0194f6;
+}
+.setting-box .colors-option .color-list li:nth-child(2){
+    background-color: rgb(255, 145, 0);
+}
+.setting-box .colors-option .color-list li:nth-child(3){
+    background-color: rgb(80, 255, 27);
+}
+.setting-box .colors-option .color-list li:nth-child(4){
+    background-color: #a200ff;
+}
+.setting-box .colors-option .color-list li:nth-child(5){
+    background-color: #eeff01;
+}
+
+.background-options span{
+    background-color: #009688;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 55px;
+    display: inline-block;
+    font-family: Lexend;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.background-options span.active {
+    opacity: 1;
+}
+
+/* end settings box section */
+
+/* Landing page section */
+.landing-page {
+    background: url('../images/programmer.jpg');
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.overlay {
+    background-color:rgba(0,0,0,0.3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.head-area {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    color: #fff;
+    z-index: 2
+}
+.head-area .logo {
+    font-family: Lobster-regular;
+    font-size: 50px;
+    padding: 20px;
+    margin-left: 50px;
+    width: 100%;
+    color: #00aafd;
+}
+.head-area .logo span {
+    color: var(--main-color);
+}
+.head-area .links {
+    width: 100%;
+    list-style: none;
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+.head-area .links li {
+    display: inline-block;
+    padding: 0 10px;
+    font-family: Josefin;
+    font-size: 17px;
+}
+.head-area .links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-family: Abel;
+    font-size: 20px;
+}
+.head-area .links .active,
+.head-area .links a:hover {
+    color: var(--main-color);
+    transition: 0.5s;
+}
+.intro-text {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 200px;
+    transform: translate(35%,-80%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+.intro-text h1 {
+    font-size: 55px;
+    font-family: Livvic;
+}
+.intro-text p {
+    font-family: Lexend;
+    line-height: 1.6;
+}
+.intro-text h1 span {
+    color: var(--main-color);
+}
+
+/* -------------- About Us container ---------------*/
+.container {
+    margin: auto;
+    padding: 0 70px;
+    width: 1170px;
+}
+.about_us {
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+}
+.about_us .info_box{
+    flex: 1;
+}
+.about_us .info_box h2{
+    font-size: 33px;
+    font-family: Lexend;
+    margin-bottom: 15px;
+    color: #03a9f4;
+    font-weight: bolder;
+}
+.about_us .info_box p {  
+    color: #767676;
+    text-indent: 25px;
+    line-height: 1.9;
+    font-size: 18px;
+    font-family: Livvic;
+    font-weight: 600;
+}
+.about_us .image-box{
+    flex: 1;
+    text-align: right;
+}
+.about_us .image-box img{
+    border-radius: 100%;
+}
+
+/*------------------------ Our Skills ----------------------*/
+.skills {
+    background: #eee;
+    padding: 50px 0;
+}
+.skills h2 {
+    font-size: 33px;
+    font-family: Lexend;
+    margin-bottom: 45px;
+    color: #03a9f4;
+    font-weight: bold;
+    text-align: center;
+}
+.skills .skills-box {
+    display: flex;
+    position: relative;
+}
+.skills .skills-box .skill-name{
+    font-size: 17px;
+    font-family: Livvic;
+    font-weight: bold;
+    margin: 20px 0;
+    background: #fff;
+    width: 100%;
+    padding: 5px;
+    
+}
+.skills .skills-box .skill-progress span{
+    background-color: var(--main-color);
+    width: 100%;
+    max-width: 53rem;
+    position: absolute;
+    top: 25px;
+    left: 145px;
+    border-radius: 5px;
+    text-align: right;
+    line-height: 13px;
+    padding: 5px;
+    padding-left: 32px;
+    font-weight: bold;
+    font-family: Livvic;
+    transition: all 0.5s ease-in;
+    height: 20px;
+}
+
+/*----------------- Galery Section ----------------*/
+.Galery {
+    padding: 50px 0;
+}
+.Galery h2  {
+    font-size: 33px;
+    font-family: Lexend;
+    margin-bottom: 45px;
+    color: #03a9f4;
+    font-weight: bold;
+    text-align: center;
+}
+.Galery .images-box img{
+    width: 330px;
+    height: 220px;
+    cursor: pointer;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid rgb(112, 112, 112);
+}
+.pop-up-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 7000;
+    width: 100%;
+    height: 100%;
+}
+.popDiv {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    padding-top: 37px;
+    max-height: 53%;
+}
+.pop-up-img img {
+    width: 100%;
+    cursor: pointer;
+}
+.popUp-head {
+    color: #000000;
+    font-family: Josefin;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 25px;
+}
+/*---------------------- timeline Section ------------------*/
+.timeline {
+    padding: 80px 0;
+    background: #EEE;
+    position: relative;
+    overflow: hidden;
+}
+.timeline-content:before {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: var(--perfer-color);
+    left: 50%;
+    top: 0;
+}
+.timeline-content .year {
+    position: relative;
+    top: -21px;
+    left: 48%;
+    background: var(--perfer-color);
+    color: rgb(255, 255, 255);
+    padding: 2px 5px;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 18px;
+    font-family: lobster-two;
+    border-radius: 10px;
+    width: 45px;
+}
+.timeline-content .left,
+.timeline-content .right {
+    width: 45%; 
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.timeline-content .left {
+    float: left;
+}
+.timeline-content .right {
+    float: right;
+}
+.timeline-content .content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid rgb(224, 224, 224);
+}
+.timeline-content .content h3 {
+    font-family: Lexend;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--perfer-color);
+}
+.timeline-content .content p {
+    font-family: Livvic;
+    line-height: 1.8;
+}
+.timeline-content .left:before,
+.timeline-content .right:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    top: 23%;
+    border: 4px solid var(--perfer-color);
+    z-index: 1;
+}
+
+.timeline-content .left:before {
+    left: 503px;
+}
+.timeline-content .right:after {
+    right: 499px;
+}
+.clear-float {
+    clear: both;
+}
+.timeline-content .left .content:before,
+.timeline-content .right .content:before {
+    content: '';
+    border-style: solid;
+    border-width: 27px;
+    height: 0px;
+    width: 0;
+    position: absolute;
+    top: 23px;
+}
+.timeline-content .left .content:before {
+    border-color: transparent transparent transparent white;
+    right: -54px;
+}
+.timeline-content .right .content:before {
+    border-color: transparent white transparent transparent;
+    left: -54px;
+}
+/*--------------------------- Our features Section ---------------------*/
+.features {
+    padding: 50px 0;
+}
+.features .features-content {
+    overflow: hidden;
+    text-align: center;
+}
+.features .features-content .feat{
+    width: 33.33%;
+    float: left;
+    padding: 10px 20px;
+}
+.features .features-content .feat img{
+    width: 172px;
+}
